@@ -130,7 +130,7 @@ Device(AFT1)
     Name (_DEP, Package ()  // _DEP: Dependencies
     {
         \_SB.SPK1
-    }
+    })
 }
 
 Device (SPK1)
