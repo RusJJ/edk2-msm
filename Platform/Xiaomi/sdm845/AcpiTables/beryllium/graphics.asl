@@ -781,6 +781,21 @@ Device (GPU0)
                     },
                     Package()
                     {
+                        600,                      // Width
+                        1247,                      // Height
+                    },
+                    Package()
+                    {
+                        600,                      // Width
+                        1151,                      // Height
+                    },
+                    Package()
+                    {
+                        600,                      // Width
+                        800,                      // Height
+                    },
+                    Package()
+                    {
                         480,                      // Width
                         998,                      // Height
                     },
