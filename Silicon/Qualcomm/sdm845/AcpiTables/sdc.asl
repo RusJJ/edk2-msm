@@ -23,7 +23,7 @@ Device (SDC2)
            Interrupt(ResourceConsumer, Level, ActiveHigh, Exclusive, , , ) {236}
 
            // Card detect GPIO
-           GpioInt(Edge, ActiveBoth, SharedAndWake, PullUp, 30000, "\\_SB.GIO0", ,) {192} 
+           GpioInt(Edge, ActiveBoth, SharedAndWake, PullUp, 30000, "\\_SB.GIO0", ,) {126} 
            Gpioio(Shared, PullUp, 0, 0, , "\\_SB.GIO0", ,) {126} 
        })
        Return (RBUF)
