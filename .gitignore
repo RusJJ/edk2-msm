@@ -13,3 +13,4 @@ ramdisk
 *.rej
 *.orig
 *.fd
+*.bak

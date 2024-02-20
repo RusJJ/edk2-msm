@@ -748,36 +748,51 @@ Device (GPU0)
                 Package()
                 {
                     "PRIMARY_SOURCE_MODES",
-                    9,                           // Number of Primary source modes
+                    12,                           // Number of Primary source modes
                     Package()
                     {
-                        1080,                      // Width
-                        2246,                      // Height
+                        1080,                     // Width
+                        2246,                     // Height
                     },
                     Package()
                     {
-                        1080,                      // Width
-                        2074,                      // Height
+                        1080,                     // Width
+                        2074,                     // Height
                     },
                     Package()
                     {
-                        1080,                      // Width
-                        1920,                      // Height
-                    },
-                    Package()
-                    {
-                        720,                      // Width
-                        1497,                      // Height
+                        1080,                     // Width
+                        1920,                     // Height
                     },
                     Package()
                     {
                         720,                      // Width
-                        1382,                      // Height
+                        1497,                     // Height
                     },
                     Package()
                     {
                         720,                      // Width
-                        1280,                      // Height
+                        1382,                     // Height
+                    },
+                    Package()
+                    {
+                        720,                      // Width
+                        1280,                     // Height
+                    },
+                    Package()
+                    {
+                        600,                      // Width
+                        1247,                     // Height
+                    },
+                    Package()
+                    {
+                        600,                      // Width
+                        1151,                     // Height
+                    },
+                    Package()
+                    {
+                        600,                      // Width
+                        800,                      // Height
                     },
                     Package()
                     {
