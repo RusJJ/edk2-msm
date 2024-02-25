@@ -14,12 +14,12 @@ Device (GIO0)
 			Memory32Fixed (ReadWrite, 0x03400000, 0x00C00000)
 
 			// Summary Interrupt shared by all banks
-			Interrupt(ResourceConsumer, Level, ActiveHigh, Shared, , , ) {240}
-			Interrupt(ResourceConsumer, Level, ActiveHigh, Shared, , , ) {240}
-			Interrupt(ResourceConsumer, Level, ActiveHigh, Shared, , , ) {240}
-			Interrupt(ResourceConsumer, Edge, ActiveBoth, Shared, , , ) {648} // For PDC  Wake up ::TLMM GPIo 126 SD Card Detection
-			Interrupt(ResourceConsumer, Edge, ActiveBoth, Shared, , , ) {568} // For PDC  Wake up ::TLMM GPIo 54 
-			Interrupt(ResourceConsumer, Edge, ActiveBoth, Shared, , , ) {646} // For PDC  Wake up ::TLMM GPIo 124, Hall sensor used for lid
+			//Interrupt(ResourceConsumer, Level, ActiveHigh, Shared, , , ) {240}
+			//Interrupt(ResourceConsumer, Level, ActiveHigh, Shared, , , ) {240}
+			//Interrupt(ResourceConsumer, Level, ActiveHigh, Shared, , , ) {240}
+			Interrupt(ResourceConsumer, Edge, ActiveBoth, Shared, , , ) {480} // For PDC  Wake up ::TLMM GPIo 126 SD Card Detection
+			Interrupt(ResourceConsumer, Edge, ActiveBoth, Shared, , , ) {609} // For PDC  Wake up ::TLMM GPIo 54 
+			Interrupt(ResourceConsumer, Edge, ActiveBoth, Shared, , , ) {630} // For PDC  Wake up ::TLMM GPIo 124, Hall sensor used for lid
 		})
 		Return (RBUF)
 	}
@@ -27,7 +27,7 @@ Device (GIO0)
 	Method(OFNI, 0x0, NotSerialized) {
 		Name(RBUF, Buffer()
 		{
-			0x96,  // 0: TOTAL_GPIO_PINS
+			0x97,  // 0: TOTAL_GPIO_PINS
 			0x00   // 1: TOTAL_GPIO_PINS
 		})
 		Return (RBUF)
