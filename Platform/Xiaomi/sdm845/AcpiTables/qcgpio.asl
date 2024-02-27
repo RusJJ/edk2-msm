@@ -18,9 +18,9 @@ Device (GIO0)
 			Interrupt(ResourceConsumer, Level, ActiveHigh, Shared, , , ) {240}
 			Interrupt(ResourceConsumer, Level, ActiveHigh, Shared, , , ) {240}
 
-			Interrupt(ResourceConsumer, Edge, ActiveHigh, Shared, , , ) {0x288} // For PDC  Wake up ::TLMM GPIo 126 SD Card Detection
+			Interrupt(ResourceConsumer, Edge, ActiveLow,  Shared, , , ) {0x288} // For PDC  Wake up ::TLMM GPIo 126 SD Card Detection
 			Interrupt(ResourceConsumer, Edge, ActiveLow,  Shared, , , ) {0x238} // For PDC  Wake up ::TLMM GPIo 54 
-			Interrupt(ResourceConsumer, Edge, ActiveHigh, Shared, , , ) {0x226} // For PDC  Wake up ::TLMM GPIo 124, Hall sensor used for lid
+			Interrupt(ResourceConsumer, Edge, ActiveLow,  Shared, , , ) {0x226} // For PDC  Wake up ::TLMM GPIo 124, Hall sensor used for lid
 			Interrupt(ResourceConsumer, Edge, ActiveHigh, Shared, , , ) {0x232}
 			Interrupt(ResourceConsumer, Edge, ActiveHigh, Shared, , , ) {0x284}
 			Interrupt(ResourceConsumer, Edge, ActiveHigh, Shared, , , ) {0x21F}
