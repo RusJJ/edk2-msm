@@ -4,9 +4,9 @@
 Device (SDC2)
 {
     Name (_DEP, Package(0x2)
-	{
-        \_SB_.PEP0,
-        \_SB_.GIO0
+    {
+        \_SB.PEP0,
+        \_SB.GIO0
     })
  
     Name (_HID, "QCOM2466")
