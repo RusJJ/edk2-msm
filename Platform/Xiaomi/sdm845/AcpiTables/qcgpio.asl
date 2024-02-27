@@ -14,12 +14,18 @@ Device (GIO0)
 			Memory32Fixed (ReadWrite, 0x03400000, 0x00C00000)
 
 			// Summary Interrupt shared by all banks
-			//Interrupt(ResourceConsumer, Level, ActiveHigh, Shared, , , ) {240}
-			//Interrupt(ResourceConsumer, Level, ActiveHigh, Shared, , , ) {240}
-			//Interrupt(ResourceConsumer, Level, ActiveHigh, Shared, , , ) {240}
-			Interrupt(ResourceConsumer, Edge, ActiveHigh, Shared, , , ) {480} // For PDC  Wake up ::TLMM GPIo 126 SD Card Detection
-			Interrupt(ResourceConsumer, Edge, ActiveHigh, Shared, , , ) {609} // For PDC  Wake up ::TLMM GPIo 54 
-			Interrupt(ResourceConsumer, Edge, ActiveHigh, Shared, , , ) {630} // For PDC  Wake up ::TLMM GPIo 124, Hall sensor used for lid
+			Interrupt(ResourceConsumer, Level, ActiveHigh, Shared, , , ) {240}
+			Interrupt(ResourceConsumer, Level, ActiveHigh, Shared, , , ) {240}
+			Interrupt(ResourceConsumer, Level, ActiveHigh, Shared, , , ) {240}
+
+			Interrupt(ResourceConsumer, Edge, ActiveHigh, Shared, , , ) {0x288} // For PDC  Wake up ::TLMM GPIo 126 SD Card Detection
+			Interrupt(ResourceConsumer, Edge, ActiveLow,  Shared, , , ) {0x238} // For PDC  Wake up ::TLMM GPIo 54 
+			Interrupt(ResourceConsumer, Edge, ActiveHigh, Shared, , , ) {0x226} // For PDC  Wake up ::TLMM GPIo 124, Hall sensor used for lid
+			Interrupt(ResourceConsumer, Edge, ActiveHigh, Shared, , , ) {0x232}
+			Interrupt(ResourceConsumer, Edge, ActiveHigh, Shared, , , ) {0x284}
+			Interrupt(ResourceConsumer, Edge, ActiveHigh, Shared, , , ) {0x21F}
+			Interrupt(ResourceConsumer, Edge, ActiveHigh, Shared, , , ) {0x236}
+			Interrupt(ResourceConsumer, Edge, ActiveHigh, Shared, , , ) {0x23D}
 		})
 		Return (RBUF)
 	}
@@ -27,7 +33,7 @@ Device (GIO0)
 	Method(OFNI, 0x0, NotSerialized) {
 		Name(RBUF, Buffer()
 		{
-			0x97,  // 0: TOTAL_GPIO_PINS
+			0x96,  // 0: TOTAL_GPIO_PINS
 			0x00   // 1: TOTAL_GPIO_PINS
 		})
 		Return (RBUF)
@@ -41,4 +47,9 @@ Device (GIO0)
 			Store(Arg1, GABL)
 		}
 	} 
+
+	Name (_AEI, Buffer (0x02)  // _AEI: ACPI Event Interrupts
+	{
+		0x79, 0x00 // idk about it
+	})
 }
