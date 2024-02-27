@@ -25,7 +25,7 @@ Device (SDC2)
             Interrupt(ResourceConsumer, Level, ActiveHigh, Exclusive, , , ) {236} // 254 freezing the Windows loading completely?
  
             // Card detect GPIO
-            GpioInt(Edge, ActiveBoth, SharedAndWake, PullUp, 30000, "\\_SB.GIO0", ,) {192}
+            GpioInt(Edge, ActiveBoth, SharedAndWake, PullDown, 30000, "\\_SB.GIO0", ,) {192}
             GpioIo(Shared, PullDown, 0, 0, , "\\_SB.GIO0", ,) {126}
         })
         Return (RBUF)
