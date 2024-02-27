@@ -5,8 +5,8 @@ Device (SDC2)
 {
     Name (_DEP, Package(0x2)
     {
-        \_SB.PEP0,
-        \_SB.GIO0
+        \_SB_.PEP0,
+        \_SB_.GIO0
     })
  
     Name (_HID, "QCOM2466")
@@ -25,8 +25,8 @@ Device (SDC2)
             Interrupt(ResourceConsumer, Level, ActiveHigh, Exclusive, , , ) {236} // 254 freezing the Windows loading completely?
  
             // Card detect GPIO
-            GpioInt(Edge, ActiveBoth, SharedAndWake, PullUp, 30000, "\\_SB.GIO0", ,) {192}
-            GpioIo(Shared, PullDown, 0, 0, , "\\_SB.GIO0", ,) {126}
+            GpioInt(Edge, ActiveBoth, SharedAndWake, PullUp, 30000, "\\_SB_.GIO0", ,) {192}
+            GpioIo(Shared, PullDown, 0, 0, , "\\_SB_.GIO0", ,) {126}
         })
         Return (RBUF)
     }
